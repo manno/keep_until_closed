@@ -1,0 +1,18 @@
+{
+  "title": "Keep Until Closed",
+  "name": "keepuntilclosed",
+  "version": "0.0.1",
+  "description": "Addon to assist with the 'Keep Cookies until closed' setting",
+  "main": "index.js",
+  "author": "Mario Manno",
+  "engines": {
+    "firefox": ">=38.0a1",
+    "fennec": ">=38.0a1"
+  },
+  "license": "MIT",
+  "keywords": [
+    "cookies",
+    "allow",
+    "exception"
+  ]
+}
