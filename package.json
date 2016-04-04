@@ -6,13 +6,14 @@
   "main": "index.js",
   "author": "Mario Manno",
   "engines": {
-    "firefox": ">=38.0a1",
-    "fennec": ">=38.0a1"
+    "firefox": ">=42.0",
+    "fennec": ">=42.0"
   },
   "license": "MIT",
   "keywords": [
     "cookies",
     "allow",
+    "whitelist",
     "exception"
   ]
 }
