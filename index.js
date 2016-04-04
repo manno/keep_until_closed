@@ -15,16 +15,12 @@ var button = buttons.ActionButton({
   onClick: toggleCookieAllow
 });
 
-// tabchanged? -> updateIcon
-// urlchanged? -> updateIcon
 tabs.on("ready", tabUpdated);
 
 function tabUpdated(tab) {
-  console.log(tab.url);
   currentUrl = tab.url;
   updateIcon();
 }
-
 
 function main() {
   if(!checkSettings()) {
@@ -33,18 +29,14 @@ function main() {
   updateIcon();
 }
 
-// warn if setting is not on keep until closed
 function checkSettings() {
   return cookiePreferences.keepUntilClosed() === true;
 }
 
-// TODO print warning instead
 function displaySettingsWarning() {
-  console.log('Forcing cookie policy to keep until closed');
-  cookiePreferences.setKeepUntilClosed();
+  console.warn('This addon will not work as expected unless the cookie lifetime policy is set to "keep until closed"');
 }
 
-// button to toggle allow for current url
 function toggleCookieAllow() {
   if(cookieExceptions.hasSite(currentUrl)) {
     cookieExceptions.removeSite(currentUrl);
@@ -54,7 +46,7 @@ function toggleCookieAllow() {
   updateIcon();
 }
 
-// different icon if url is allow in exception list
+// different icon if url is in exception list
 function updateIcon() {
   console.log(cookieExceptions.hasSite(currentUrl));
   button.state("tab", {icon: cookieExceptions.hasSite(currentUrl) ? './icon-on-16.png' : './icon-off-16.png'});
