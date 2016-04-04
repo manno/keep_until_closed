@@ -1,5 +1,6 @@
 var self = require("sdk/self");
-var cookieExceptions = require("./lib/cookie_exceptions").CookieExceptions;
+var cookieExceptions = new (require("lib/cookie_exceptions").CookieExceptions)();
+var cookiePolicy = require("lib/cookie_policy");
 
 // a dummy function, to show how tests work.
 // to see how to test this function, look at test/test-index.js
@@ -26,8 +27,7 @@ function handleClick(state) {
 
 // warn if setting is not on keep until closed
 function checkSettings() {
-  var service = require("sdk/preferences/service");
-  // network.cookie.cookieBehavior == 3
+  cookiePolicy.keepUntilClosed() == true
 }
 
 function displaySettingsWarning() {
