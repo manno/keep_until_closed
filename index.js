@@ -16,16 +16,19 @@ var button = buttons.ActionButton({
 });
 
 tabs.on("ready", tabUpdated);
+tabs.on("activate", tabUpdated);
+
+// for development
+cookiePreferences.setKeepUntilClosed();
+
+if(!checkSettings()) {
+  displaySettingsWarning();
+}
+
+updateIcon();
 
 function tabUpdated(tab) {
   currentUrl = tab.url;
-  updateIcon();
-}
-
-function main() {
-  if(!checkSettings()) {
-    displaySettingsWarning();
-  }
   updateIcon();
 }
 
@@ -48,6 +51,5 @@ function toggleCookieAllow() {
 
 // different icon if url is in exception list
 function updateIcon() {
-  console.log(cookieExceptions.hasSite(currentUrl));
   button.state("tab", {icon: cookieExceptions.hasSite(currentUrl) ? './icon-on-16.png' : './icon-off-16.png'});
 }

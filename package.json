@@ -1,7 +1,7 @@
 {
   "title": "Keep Until Closed",
   "name": "keepuntilclosed",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Addon to assist with the 'Keep Cookies until closed' setting",
   "main": "index.js",
   "author": "Mario Manno",
