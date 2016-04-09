@@ -1,6 +1,6 @@
 # Keep Until Closed
 
-Add-on to assist with the 'Keep Cookies until closed' setting
+Add-on to whitelist cookies. Useful for the the 'keep cookies until closed' lifetime policy setting.
 
 ## Description
 

@@ -11,7 +11,7 @@ var currentUrl = "";
 var button = buttons.ActionButton({
   id: "keep-link",
   label: "Allow Cookies?",
-  icon: "./icon-off-16.png",
+  icon: "./icon-off-64.png",
   onClick: toggleCookieAllow
 });
 
@@ -51,5 +51,5 @@ function toggleCookieAllow() {
 
 // different icon if url is in exception list
 function updateIcon() {
-  button.state("tab", {icon: cookieExceptions.hasSite(currentUrl) ? './icon-on-16.png' : './icon-off-16.png'});
+  button.state("tab", {icon: cookieExceptions.hasSite(currentUrl) ? './icon-on-64.png' : './icon-off-64.png'});
 }

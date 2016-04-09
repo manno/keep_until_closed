@@ -1,10 +1,11 @@
 {
   "title": "Keep Until Closed",
   "name": "keepuntilclosed",
-  "version": "0.0.3",
-  "description": "Addon to assist with the 'Keep Cookies until closed' setting",
+  "version": "0.0.4",
+  "description": "Add-on to whitelist cookies for the 'keep cookies until closed' lifetime policy",
   "main": "index.js",
   "author": "Mario Manno",
+  "homepage": "https://github.com/manno/keep_until_closed",
   "engines": {
     "firefox": ">=42.0",
     "fennec": ">=42.0"
