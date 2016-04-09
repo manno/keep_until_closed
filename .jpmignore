@@ -1,0 +1,6 @@
+contrib/
+*.xpi
+.git/
+.gitignore
+.jpmignore
+test/
